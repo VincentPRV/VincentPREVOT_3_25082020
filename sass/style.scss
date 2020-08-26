@@ -1,4 +1,173 @@
-body{
-    color:red;
-    border:yellow 1px solid;
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$gris-clair: #F5F5F5;
+$gris-fonce: #E0E0E0;
+
+@mixin center-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+@mixin gras {
+    font-weight: bold;
+}
+@mixin paddingcoeur {
+    padding: 15px;
+}
+@mixin paddinginfo {
+    padding: 10px;
+}
+
+@mixin rest-prv {
+    height: 200px;
+    position: relative;
+    border-radius: 10px;
+}
+@mixin rest-prvinfo{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    line-height: 15px;
+    margin-top:-10px; 
+}
+        
+@font-face {
+    font-family: 'robotoregular';
+    src: url('Roboto-Regular-webfont.eot');
+    src: url('Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Roboto-Regular-webfont.woff2') format('woff2'),
+         url('Roboto-Regular-webfont.woff') format('woff'),
+         url('Roboto-Regular-webfont.ttf') format('truetype'),
+         url('Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Shrikhand-Regular';
+    src: url('Shrikhand-Regular.otf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#restaurants{
+    margin: auto;
+    height: 900px;
+    width: 320px;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: red solid 1px;
+  
+}
+
+#index{
+    height: 100%;
+    width: 320px;    
+    
+}
+
+body{
+    font-family: 'robotoregular';
+    @include center-content;
+    flex-direction: column;
+    
+}
+
+header{
+    @include center-content;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+}
+
+#localisation
+{
+    @include center-content;
+    background: $gris-fonce;
+    i{
+        padding-right: 10px;
+    }
+}
+
+.rest-prev--palette{
+    @include rest-prv;
+    background: url('../images/la-palette-du-gout.jpg') center/cover;
+    background-position-y: -50px;
+    &__info{
+        @include rest-prvinfo;
+        &__detail{
+            @include paddinginfo;
+        span{
+            @include gras;
+        }
+        }
+        &__coeur{
+            @include paddingcoeur;
+        }    
+    }
+}
+
+.rest-prev--note{
+    @include rest-prv;
+    background: url('../images/la-note-enchantee.jpg') center/cover;
+    background-position-y: -150px;
+    &__info{
+        @include rest-prvinfo;
+        &__detail{
+            @include paddinginfo;
+        span{
+            @include gras;
+        }
+        }
+        &__coeur{
+            @include paddingcoeur;
+        }  
+    }    
+}
+
+.rest-prev--francaise{
+    @include rest-prv;
+    background: url('../images/a-la-francaise.jpg') center/cover;
+    background-position-y: -45px;
+    &__info{
+        @include rest-prvinfo;
+        &__detail{
+            @include paddinginfo;
+        span{
+            @include gras;
+        }
+        }
+        &__coeur{
+            @include paddingcoeur;
+        }  
+    }    
+}
+
+.rest-prev--delice{
+    @include rest-prv;
+    background: url('../images/le-delice-des-sens.jpg') center/cover;
+    background-position-y: -50px;
+    &__info{
+        @include rest-prvinfo;
+        &__detail{
+            @include paddinginfo;
+        span{
+            @include gras;
+        }
+        }
+        &__coeur{
+            @include paddingcoeur;
+        }  
+    }    
+}
+

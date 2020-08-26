@@ -1,5 +1,148 @@
+@font-face {
+  font-family: 'robotoregular';
+  src: url("Roboto-Regular-webfont.eot");
+  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff2") format("woff2"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Shrikhand-Regular';
+  src: url("Shrikhand-Regular.otf");
+  font-weight: normal;
+  font-style: normal; }
+#restaurants {
+  margin: auto;
+  height: 900px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: red solid 1px; }
+
+#index {
+  height: 100%;
+  width: 320px; }
+
 body {
-  color: red;
-  border: yellow 1px solid; }
+  font-family: 'robotoregular';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  background-color: white; }
+
+#localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #E0E0E0; }
+  #localisation i {
+    padding-right: 10px; }
+
+.rest-prev--palette {
+  height: 200px;
+  position: relative;
+  border-radius: 10px;
+  background: url("../images/la-palette-du-gout.jpg") center/cover;
+  background-position-y: -50px; }
+  .rest-prev--palette__info {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    line-height: 15px;
+    margin-top: -10px; }
+    .rest-prev--palette__info__detail {
+      padding: 10px; }
+      .rest-prev--palette__info__detail span {
+        font-weight: bold; }
+    .rest-prev--palette__info__coeur {
+      padding: 15px; }
+
+.rest-prev--note {
+  height: 200px;
+  position: relative;
+  border-radius: 10px;
+  background: url("../images/la-note-enchantee.jpg") center/cover;
+  background-position-y: -150px; }
+  .rest-prev--note__info {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    line-height: 15px;
+    margin-top: -10px; }
+    .rest-prev--note__info__detail {
+      padding: 10px; }
+      .rest-prev--note__info__detail span {
+        font-weight: bold; }
+    .rest-prev--note__info__coeur {
+      padding: 15px; }
+
+.rest-prev--francaise {
+  height: 200px;
+  position: relative;
+  border-radius: 10px;
+  background: url("../images/a-la-francaise.jpg") center/cover;
+  background-position-y: -45px; }
+  .rest-prev--francaise__info {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    line-height: 15px;
+    margin-top: -10px; }
+    .rest-prev--francaise__info__detail {
+      padding: 10px; }
+      .rest-prev--francaise__info__detail span {
+        font-weight: bold; }
+    .rest-prev--francaise__info__coeur {
+      padding: 15px; }
+
+.rest-prev--delice {
+  height: 200px;
+  position: relative;
+  border-radius: 10px;
+  background: url("../images/le-delice-des-sens.jpg") center/cover;
+  background-position-y: -50px; }
+  .rest-prev--delice__info {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    line-height: 15px;
+    margin-top: -10px; }
+    .rest-prev--delice__info__detail {
+      padding: 10px; }
+      .rest-prev--delice__info__detail span {
+        font-weight: bold; }
+    .rest-prev--delice__info__coeur {
+      padding: 15px; }
 
 /*# sourceMappingURL=style.css.map */
