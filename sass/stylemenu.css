@@ -1,0 +1,103 @@
+@font-face {
+  font-family: 'robotoregular';
+  src: url("Roboto-Regular-webfont.eot");
+  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Shrikhand-Regular';
+  src: url("Shrikhand-Regular.otf") format "otf";
+  font-weight: normal;
+  font-style: normal; }
+#image img {
+  width: 320px; }
+
+body {
+  font-family: 'robotoregular';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 13px; }
+
+h1 {
+  font-family: 'Shrikhand-Regular';
+  font-weight: bold; }
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 800px;
+  border-radius: 35px 35px 0px 0px;
+  margin: -50px;
+  background-color: #F5F5F5; }
+  .menu__titre {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px; }
+    .menu__titre .far {
+      font-size: 20px; }
+  .menu__entrees {
+    height: 300px;
+    padding: 10px; }
+
+.categorie h2 {
+  font-weight: lighter;
+  text-transform: uppercase; }
+
+.titre_couleur {
+  border-bottom: 2px solid #99E2D0; }
+
+.btn {
+  width: 270px;
+  height: 50px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  -webkit-box-shadow: 0px 0px 14px -2px #c7c7c7;
+  -moz-box-shadow: 0px 0px 14px -2px #c7c7c7;
+  box-shadow: 0px 0px 14px -2px #c7c7c7;
+  margin: 10px;
+  padding: 4px; }
+  .btn span {
+    font-weight: bold; }
+  .btn__detail {
+    margin-top: -5px;
+    width: 270px; }
+  .btn__prix {
+    width: 30px;
+    margin-top: 11px; }
+
+footer {
+  background-color: #424242;
+  width: 320px;
+  color: white; }
+
+.footer_titre {
+  height: 30px;
+  width: 320px; }
+  .footer_titre img {
+    height: 15px;
+    margin: 15px; }
+
+.footer_info {
+  height: 100px;
+  margin: 0px 0px 15px 15px; }
+  .footer_info li {
+    list-style-type: none;
+    margin-left: -40px;
+    line-height: 20px; }
+  .footer_info li:nth-of-type(1) {
+    font-weight: bold; }
+  .footer_info li:nth-of-type(2) {
+    font-weight: bold; }
+  .footer_info .fas {
+    font-size: 9px;
+    width: 15px; }
+  .footer_info .fa-utensils {
+    font-size: 10px; }
+
+/*# sourceMappingURL=stylemenu.css.map */

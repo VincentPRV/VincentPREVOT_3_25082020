@@ -1,0 +1,193 @@
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$gris-clair: #F5F5F5;
+$gris-fonce: #E0E0E0;
+
+@mixin center-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin gras {
+    font-weight: bold;
+}
+@mixin paddingcoeur {
+    padding: 15px;
+}
+@mixin paddinginfo {
+    padding: 10px;
+}
+@mixin box-shadow {
+    -webkit-box-shadow: 0px 10px 18px -1px rgba(153,153,153,1);
+    -moz-box-shadow: 0px 10px 18px -1px rgba(153,153,153,1);
+    box-shadow: 0px 10px 18px -1px rgba(153,153,153,1);
+}
+@mixin rest-prv {
+    margin: auto;
+    height: 200px;
+    width: 280px;
+    position: relative;
+    border-radius: 15px;
+}
+@mixin rest-prvinfo{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    line-height: 15px;
+    margin-top:-10px; 
+}
+@mixin btn-shadow($color-primary){
+    background-color: lighten($color-primary, 35%);
+} 
+@mixin btn-shadow2 {
+    -webkit-box-shadow: 0px 0px 14px -2px rgba(199,199,199,1);
+    -moz-box-shadow: 0px 0px 14px -2px rgba(199,199,199,1);
+    box-shadow: 0px 0px 14px -2px rgba(199,199,199,1);
+}
+
+@mixin degrade {
+    background: linear-gradient($color-secondary,$color-primary);
+}
+@mixin box-shadow {
+    -webkit-box-shadow: -1px 4px 10px 2px rgba(125,125,125,0.55); 
+    box-shadow: -1px 4px 10px 2px rgba(125,125,125,0.55);
+}
+@font-face {
+    font-family: 'robotoregular';
+    src: url('Roboto-Regular-webfont.eot');
+    src: url('Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Roboto-Regular-webfont.woff') format('woff'),
+         url('Roboto-Regular-webfont.ttf') format('truetype'),
+         url('Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Shrikhand-Regular';
+    src: url('Shrikhand-Regular.otf') format ('otf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#image img{
+    width: 320px;
+}
+
+body{
+    font-family: 'robotoregular';
+    @include center-content;
+    flex-direction: column;
+    font-size: 13px;
+}
+
+h1{
+    font-family: 'Shrikhand-Regular';
+    @include gras;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 800px;
+    border-radius: 35px 35px 0px 0px;
+    margin: -50px; 
+    background-color: $gris-clair;
+    &__titre{
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px;
+        .far{
+            font-size: 20px;
+        }
+    }
+    &__entrees{
+        height: 300px;
+        padding: 10px;
+    
+    }
+}
+
+.categorie h2{
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.titre_couleur{
+    border-bottom: 2px solid $color-tertiary;
+}
+.btn{
+    width: 270px;
+    height: 50px;
+    background-color:white;
+    border-radius: 10px;
+    display: flex;
+    @include btn-shadow2;
+    margin: 10px;
+    padding: 4px;
+    span{
+        @include gras;
+    }
+    &__detail{
+        margin-top: -5px;
+      
+        width: 270px;
+    }
+    &__prix{
+        width: 30px;
+        margin-top: 11px;
+    }
+}
+
+footer{
+    background-color: #424242;
+    width: 320px;
+    color: white;
+
+}
+ .footer_titre
+ {
+
+    height: 30px;
+    width: 320px;
+    img{
+        height: 15px;
+        margin: 15px;
+    }
+ }
+
+ .footer_info{
+    height: 100px;
+    margin: 0px 0px 15px 15px;  
+    li{
+        list-style-type: none;
+        margin-left: -40px;
+        line-height: 20px;
+    }
+    li:nth-of-type(1) {
+        @include gras;
+      }
+    li:nth-of-type(2) {
+        @include gras;
+    }
+    .fas{
+       
+        font-size: 9px;
+        width: 15px;
+    }
+    .fa-utensils{
+        font-size: 10px;
+    }
+ }

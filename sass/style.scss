@@ -19,13 +19,22 @@ $gris-fonce: #E0E0E0;
 @mixin paddinginfo {
     padding: 10px;
 }
-
+@mixin box-shadow {
+    -webkit-box-shadow: 0px 10px 18px -1px rgba(153,153,153,1);
+    -moz-box-shadow: 0px 10px 18px -1px rgba(153,153,153,1);
+    box-shadow: 0px 10px 18px -1px rgba(153,153,153,1);
+}
 @mixin rest-prv {
     margin: auto;
     height: 200px;
     width: 280px;
     position: relative;
-    border-radius: 10px;
+    border-radius: 15px;
+}
+@mixin btn-shadow2 {
+    -webkit-box-shadow: 0px 0px 14px -2px rgba(199,199,199,1);
+    -moz-box-shadow: 0px 0px 14px -2px rgba(199,199,199,1);
+    box-shadow: 0px 0px 14px -2px rgba(199,199,199,1);
 }
 @mixin rest-prvinfo{
     position: absolute;
@@ -47,11 +56,14 @@ $gris-fonce: #E0E0E0;
 @mixin degrade {
     background: linear-gradient($color-secondary,$color-primary);
 }
+@mixin box-shadow {
+    -webkit-box-shadow: -1px 4px 10px 2px rgba(125,125,125,0.55); 
+    box-shadow: -1px 4px 10px 2px rgba(125,125,125,0.55);
+}
 @font-face {
     font-family: 'robotoregular';
     src: url('Roboto-Regular-webfont.eot');
     src: url('Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Roboto-Regular-webfont.woff2') format('woff2'),
          url('Roboto-Regular-webfont.woff') format('woff'),
          url('Roboto-Regular-webfont.ttf') format('truetype'),
          url('Roboto-Regular-webfont.svg#robotoregular') format('svg');
@@ -61,7 +73,7 @@ $gris-fonce: #E0E0E0;
 
 @font-face{
     font-family: 'Shrikhand-Regular';
-    src: url('Shrikhand-Regular.otf');
+    src: url('Shrikhand-Regular.otf') format ('otf');
     font-weight: normal;
     font-style: normal;
 
@@ -79,6 +91,7 @@ body{
     font-family: 'robotoregular';
     @include center-content;
     flex-direction: column;
+    font-size: 13px;
 }
 
 header{
@@ -93,7 +106,7 @@ header{
 #localisation
 {
     @include center-content;
-    
+    padding-top: 90px;
     background: $gris-fonce;
     i{
         padding-right: 10px;
@@ -111,7 +124,7 @@ header{
         height: 80px;   
     }
     &__titre{
-        height: 100px;
+        height: 50px;
     }
     &__btn{
         @include degrade;
@@ -120,29 +133,50 @@ header{
         border-radius: 30px;
         color: white;
         @include center-content;
-        box-shadow: 7px 7px 4px $gris-fonce;
+        @include box-shadow;
     }
 }
 
 .fonct{
     height: 320px;
-   
-    flex-wrap: nowrap;
     &__titre{
-       margin-left: 20px;
+
     }
-    &__list{
-        
+    ol {
+        list-style-type: none; 
+        padding: 0px 10px 0px 10px;
     }
+    li {
+        padding: 18px;
+        margin: 20px;
+        counter-increment: list;
+        font-size: 15px;
+        @include gras;
+    }
+    
+    li:before {
+        content: counter(list);
+        font-size: 13px;
+        color: white;
+        background-color: $color-primary;
+        border-radius: 50%;
+        margin: 0px 20px 0px -32px;
+        padding: 4px 8px;
+    }
+    
+    .fas {
+       margin: 5px;
+       padding-right: 10px;
+       color:grey;
+       width: 20px;      
+    }
+   
 }
 .cellule{
     background-color: $gris-clair;
     border-radius: 20px;
     height: 25px;
-    margin: 20px;
-    -webkit-box-shadow: 0px 0px 14px -2px rgba(199,199,199,1);
-    -moz-box-shadow: 0px 0px 14px -2px rgba(199,199,199,1);
-    box-shadow: 0px 0px 14px -2px rgba(199,199,199,1);
+    @include btn-shadow2;
     &:hover {
         @include btn-shadow($color-primary);
         cursor: pointer;
@@ -151,38 +185,12 @@ header{
         color: $color-primary;
     }
 }
-ol {
-    list-style-type: none; 
-    padding: 0px 10px 0px 10px;
-}
-li {
-    padding: 20px;
-    margin: 10px;
-    counter-increment: list;
-    font-size: 15px;
-    @include gras;
-}
-
-li:before {
-    content: counter(list);
-    font-size: 13px;
-    color: white;
-    background-color: $color-primary;
-    border-radius: 50%;
-    margin: 0px 20px 0px -32px;
-    padding: 4px 8px;
-}
-
-.fas {
-   margin: 5px;
-   padding-right: 10px;
-   color:grey;
-}
 
 #restaurants{
     background-color: $gris-clair;
     margin: auto;
-    height: 900px;
+    height: 1000px;
+    padding-bottom: 20px;
     width: 320px;   
     display: flex;
     flex-direction: column;
@@ -190,10 +198,15 @@ li:before {
     h1{
         margin-left: 20px;
     }
+    a{
+        text-decoration: none;
+        color: black;
+    }
 }
 
 .rest-prev--palette{
     @include rest-prv;
+    @include box-shadow;
     background: url('../images/la-palette-du-gout.jpg') center/cover;
     background-position-y: -50px;
     &__info{
@@ -212,6 +225,7 @@ li:before {
 
 .rest-prev--note{
     @include rest-prv;
+    @include box-shadow;
     background: url('../images/la-note-enchantee.jpg') center/cover;
     background-position-y: -120px;
     &__info{
@@ -230,6 +244,7 @@ li:before {
 
 .rest-prev--francaise{
     @include rest-prv;
+    @include box-shadow;
     background: url('../images/a-la-francaise.jpg') center/cover;
     background-position-y: -50px;
     &__info{
@@ -248,6 +263,7 @@ li:before {
 
 .rest-prev--delice{
     @include rest-prv;
+    @include box-shadow;
     background: url('../images/le-delice-des-sens.jpg') center/cover;
     background-position-y: -50px;
     &__info{
@@ -264,3 +280,43 @@ li:before {
     }    
 }
 
+footer{
+    background-color: #424242;
+    width: 320px;
+    color: white;
+
+}
+ .footer_titre
+ {
+
+    height: 30px;
+    width: 320px;
+    img{
+        height: 15px;
+        margin: 15px;
+    }
+ }
+
+ .footer_info{
+    height: 100px;
+    margin: 0px 0px 15px 15px;  
+    li{
+        list-style-type: none;
+        margin-left: -40px;
+        line-height: 20px;
+    }
+    li:nth-of-type(1) {
+        @include gras;
+      }
+    li:nth-of-type(2) {
+        @include gras;
+    }
+    .fas{
+       
+        font-size: 9px;
+        width: 15px;
+    }
+    .fa-utensils{
+        font-size: 10px;
+    }
+ }
