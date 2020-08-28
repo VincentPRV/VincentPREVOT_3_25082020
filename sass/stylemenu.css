@@ -90,15 +90,37 @@ h1 {
   -moz-box-shadow: 0px 0px 14px -2px #c7c7c7;
   box-shadow: 0px 0px 14px -2px #c7c7c7;
   margin: 10px;
-  padding: 4px; }
+  flex-grow: 1; }
+  .btn:hover {
+    cursor: pointer; }
+    .btn:hover > .btn__animation {
+      transform: translateX(-50px); }
+    .btn:hover > .btn__animation__circle {
+      transform: rotate(90deg); }
+  .btn__animation {
+    width: 15%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #99E2D0;
+    transition: transform 500ms;
+    transform-origin: 100% 0%; }
+    .btn__animation__circle {
+      color: white;
+      background-color: #99E2D0;
+      transition: transform 500ms;
+      display: inline; }
   .btn span {
     font-weight: bold; }
   .btn__detail {
-    margin-top: -5px;
-    width: 270px; }
+    width: 70%; }
   .btn__prix {
-    width: 30px;
-    margin-top: 11px; }
+    width: 15%;
+    display: flex;
+    align-items: flex-end; }
 
 .btn_commande {
   background: linear-gradient(#FF79DA, #9356DC);

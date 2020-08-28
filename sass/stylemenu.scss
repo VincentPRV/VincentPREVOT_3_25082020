@@ -167,18 +167,43 @@ h1{
     display: flex;
     @include btn-shadow2;
     margin: 10px;
-    padding: 4px;
+    flex-grow: 1;
+    &:hover{ 
+        cursor: pointer;
+    & > .btn__animation {
+        transform: translateX(-50px);          
+        }
+    & > .btn__animation__circle{
+        transform: rotate(90deg);
+    }    
+    }
+    
+    &__animation{
+        width: 15%;
+        flex-grow: 1;
+        @include center-content;
+        font-size: 15px;
+        border-radius: 0px 10px 10px 0px;
+        background-color: $color-tertiary;
+        transition: transform 500ms;
+        transform-origin: 100% 0%;
+        &__circle{
+            color: white;
+            background-color:$color-tertiary;
+            transition: transform 500ms;
+            display: inline;
+        }
+       }
     span{
         @include gras;
     }
     &__detail{
-        margin-top: -5px;
-      
-        width: 270px;
+        width: 70%;        
     }
     &__prix{
-        width: 30px;
-        margin-top: 11px;
+        width: 15%;
+        display: flex;
+        align-items: flex-end;
     }
 }
 
