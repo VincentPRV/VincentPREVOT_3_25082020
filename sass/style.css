@@ -61,6 +61,7 @@ header {
     height: 40px;
     width: 200px;
     border-radius: 30px;
+    cursor: not-allowed;
     color: white;
     display: flex;
     justify-content: center;
@@ -129,7 +130,7 @@ header {
   border-radius: 15px;
   -webkit-box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
   box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
-  background: url("../images/la-palette-du-gout.jpg") center/cover;
+  background: url("../images/la-palette-du-gout1.jpg") center/cover;
   background-position-y: -50px; }
   .rest-prev--palette__info {
     position: absolute;
@@ -158,8 +159,8 @@ header {
   border-radius: 15px;
   -webkit-box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
   box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
-  background: url("../images/la-note-enchantee.jpg") center/cover;
-  background-position-y: -120px; }
+  background: url("../images/la-note-enchantee1.jpg") center/cover;
+  background-position-y: -60px; }
   .rest-prev--note__info {
     position: absolute;
     bottom: 0;
@@ -187,7 +188,7 @@ header {
   border-radius: 15px;
   -webkit-box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
   box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
-  background: url("../images/a-la-francaise.jpg") center/cover;
+  background: url("../images/a-la-francaise1.jpg") center/cover;
   background-position-y: -50px; }
   .rest-prev--francaise__info {
     position: absolute;
@@ -216,7 +217,7 @@ header {
   border-radius: 15px;
   -webkit-box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
   box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
-  background: url("../images/le-delice-des-sens.jpg") center/cover;
+  background: url("../images/le-delice-des-sens1.jpg") center/cover;
   background-position-y: -50px; }
   .rest-prev--delice__info {
     position: absolute;

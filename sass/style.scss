@@ -52,7 +52,6 @@ $gris-fonce: #E0E0E0;
 @mixin btn-shadow($color-primary){
     background-color: lighten($color-primary, 35%);
 } 
-
 @mixin degrade {
     background: linear-gradient($color-secondary,$color-primary);
 }
@@ -70,7 +69,6 @@ $gris-fonce: #E0E0E0;
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face{
     font-family: 'Shrikhand-Regular';
     src: url('Shrikhand-Regular.otf') format ('otf');
@@ -131,6 +129,7 @@ header{
         height: 40px;
         width: 200px;
         border-radius: 30px;
+        cursor: not-allowed;
         color: white;
         @include center-content;
         @include box-shadow;
@@ -207,7 +206,7 @@ header{
 .rest-prev--palette{
     @include rest-prv;
     @include box-shadow;
-    background: url('../images/la-palette-du-gout.jpg') center/cover;
+    background: url('../images/la-palette-du-gout1.jpg') center/cover;
     background-position-y: -50px;
     &__info{
         @include rest-prvinfo;
@@ -226,8 +225,8 @@ header{
 .rest-prev--note{
     @include rest-prv;
     @include box-shadow;
-    background: url('../images/la-note-enchantee.jpg') center/cover;
-    background-position-y: -120px;
+    background: url('../images/la-note-enchantee1.jpg') center/cover;
+    background-position-y: -60px;
     &__info{
         @include rest-prvinfo;
         &__detail{
@@ -245,7 +244,7 @@ header{
 .rest-prev--francaise{
     @include rest-prv;
     @include box-shadow;
-    background: url('../images/a-la-francaise.jpg') center/cover;
+    background: url('../images/a-la-francaise1.jpg') center/cover;
     background-position-y: -50px;
     &__info{
         @include rest-prvinfo;
@@ -264,7 +263,7 @@ header{
 .rest-prev--delice{
     @include rest-prv;
     @include box-shadow;
-    background: url('../images/le-delice-des-sens.jpg') center/cover;
+    background: url('../images/le-delice-des-sens1.jpg') center/cover;
     background-position-y: -50px;
     &__info{
         @include rest-prvinfo;
