@@ -1,16 +1,17 @@
 @font-face {
   font-family: 'robotoregular';
-  src: url("Roboto-Regular-webfont.eot");
-  src: url("Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("Roboto-Regular-webfont.woff") format("woff"), url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  src: url("../font/Roboto-Regular-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 @font-face {
   font-family: 'Shrikhand-Regular';
-  src: url("Shrikhand-Regular.otf") format "otf";
+  src: url("../font/Shrikhand-Regular.otf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-#image img {
-  width: 320px; }
+#image {
+  margin-bottom: -35px; }
+  #image img {
+    width: 320px; }
 
 a {
   text-decoration: none;
@@ -22,7 +23,8 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: 13px; }
+  font-size: 13px;
+  height: 100%; }
 
 header {
   display: flex;
@@ -32,7 +34,8 @@ header {
   width: 320px;
   background-color: white;
   position: fixed;
-  top: 0px; }
+  top: 0px;
+  z-index: 1; }
 
 .logo_titre {
   width: 260px; }
@@ -44,31 +47,83 @@ header {
 
 h1 {
   font-family: 'Shrikhand-Regular';
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 20px; }
 
+.btn {
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  /* Firefox */
+  -webkit-animation: fadein 2s;
+  /* Safari et Chrome */
+  -o-animation: fadein 2s;
+  /* Opera */ }
+
+.btn:nth-child(1) {
+  animation-duration: 2s; }
+
+.btn:nth-child(2) {
+  animation-duration: 3s; }
+
+.btn:nth-child(3) {
+  animation-duration: 4s; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fadein {
+  /* sur Firefox */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-o-keyframes fadein {
+  /* sur Opera */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 .menu {
   display: flex;
   flex-direction: column;
   width: 320px;
-  height: 1060px;
+  height: 100%;
   border-radius: 40px 40px 0px 0px;
-  margin: -50px;
   background-color: #F5F5F5; }
+  .menu__coeur {
+    padding: 15px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .menu__coeur :hover > .far {
+      display: none; }
+    .menu__coeur :hover > .fas {
+      display: block; }
+    .menu__coeur .fas {
+      display: none;
+      background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
   .menu__titre {
-    height: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 20px; }
-    .menu__titre .far {
-      font-size: 20px; }
   .menu__detail {
-    height: 300px;
-    padding: 10px;
-    margin-top: -25px; }
+    height: 100%;
+    padding: 10px; }
   .menu__commande {
     height: 100px;
-    margin-top: -47px;
+    margin-top: -20px;
     display: flex;
     justify-content: center;
     align-items: center; }
@@ -100,9 +155,6 @@ h1 {
       transform: scaleX(1);
       width: 50px;
       transition: 800ms; }
-      .btn:hover > .btn__animation__circle {
-        transform: rotate(0deg);
-        color: orange; }
     .btn:hover > .btn__detail {
       width: 190px;
       transition: 800ms; }
@@ -156,19 +208,28 @@ h1 {
   align-items: center;
   -webkit-box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
   box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
-  cursor: not-allowed; }
+  cursor: pointer; }
 
 footer {
   background-color: #424242;
   width: 320px;
   color: white; }
+  footer h3 {
+    font-family: 'Shrikhand-Regular';
+    margin: 15px;
+    padding-top: 10px; }
+  footer a {
+    text-decoration: none;
+    color: white; }
+  footer .fas {
+    font-size: 9px;
+    width: 15px; }
+  footer .fa-utensils {
+    font-size: 10px; }
 
 .footer_titre {
   height: 30px;
   width: 320px; }
-  .footer_titre img {
-    height: 15px;
-    margin: 15px; }
 
 .footer_info {
   height: 100px;
@@ -181,10 +242,5 @@ footer {
     font-weight: bold; }
   .footer_info li:nth-of-type(2) {
     font-weight: bold; }
-  .footer_info .fas {
-    font-size: 9px;
-    width: 15px; }
-  .footer_info .fa-utensils {
-    font-size: 10px; }
 
 /*# sourceMappingURL=stylemenu.css.map */

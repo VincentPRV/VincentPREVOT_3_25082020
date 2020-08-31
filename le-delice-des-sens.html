@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - La Palette Du Goût</title>
+    <title>Menu - Le Délice Des Sens</title>
     <link rel="stylesheet" href="sass/stylemenu.css">
     <script src="https://kit.fontawesome.com/f53c7949c7.js" crossorigin="anonymous"></script>
 </head>
@@ -16,7 +16,12 @@
     <main class="menu">
         <section class="menu__titre">
             <h1>Le Délice Des Sens</h1>
-            <i class="far fa-heart"></i>
+            <div class="menu__coeur">
+                <span class="fa-stack">
+                    <i class="far fa-heart fa-stack-1x"></i>
+                    <i class="fas fa-heart fa-stack-1x"></i>
+                </span>
+            </div>    
         </section>
         <section class="menu__detail">
             <article class="categorie">
@@ -25,26 +30,58 @@
             <article class="contenu">
                 <div class="btn">
                     <div class="btn__detail">
-                        <p><span>Escargots</span><br>Avec épices du Sud de la France</p>
+                        <p><span>Ravioli de fois gras</span><br>Avec une sauce de truffes</p>
                     </div>
                     <div class="btn__prix">
                         <span><p>25€</p></span>
                     </div>
+                    <div class="btn__animation">
+                        <div class="btn__animation__zone">
+                            <div class="btn__animation__circle"><i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="btn">
                     <div class="btn__detail">
-                        <p><span>Foie gras de canard</span><br>aux copeaux de truffe noire</p>
+                        <p><span>Caviar Oscietra</span><br>Accompagné de blinis de sarrasin</p>
                     </div>
                     <div class="btn__prix">
                         <span><p>35€</p></span>
                     </div>
+                    <div class="btn__animation">
+                        <div class="btn__animation__zone">
+                            <div class="btn__animation__circle"><i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="btn">
                     <div class="btn__detail">
-                        <p><span>Oeuf au plat</span><br>...</p>
+                        <p><span>Homard et mousse de poireau</span><br>Marinée avec un zest d'orange</p>
                     </div>
                     <div class="btn__prix">
                         <span><p>20€</p></span>
+                    </div>
+                    <div class="btn__animation">
+                        <div class="btn__animation__zone">
+                            <div class="btn__animation__circle"><i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <div class="btn__detail">
+                        <p><span>Foie gras de canard</span><br>Accompagné d'une confiture aux figues</p>
+                    </div>
+                    <div class="btn__prix">
+                        <span><p>35€</p></span>
+                    </div>
+                    <div class="btn__animation">
+                        <div class="btn__animation__zone">
+                            <div class="btn__animation__circle"><i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -61,6 +98,12 @@
                     <div class="btn__prix">
                         <span><p>40€</p></span>
                     </div>
+                    <div class="btn__animation">
+                        <div class="btn__animation__zone">
+                            <div class="btn__animation__circle"><i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="btn">
                     <div class="btn__detail">
@@ -69,6 +112,12 @@
                     <div class="btn__prix">
                         <span><p>35€</p></span>
                     </div>
+                    <div class="btn__animation">
+                        <div class="btn__animation__zone">
+                            <div class="btn__animation__circle"><i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="btn">
                     <div class="btn__detail">
@@ -76,6 +125,12 @@
                     </div>
                     <div class="btn__prix">
                         <span><p>44€</p></span>
+                    </div>
+                    <div class="btn__animation">
+                        <div class="btn__animation__zone">
+                            <div class="btn__animation__circle"><i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -92,6 +147,12 @@
                     <div class="btn__prix">
                         <span><p>18€</p></span>
                     </div>
+                    <div class="btn__animation">
+                        <div class="btn__animation__zone">
+                            <div class="btn__animation__circle"><i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="btn">
                     <div class="btn__detail">
@@ -100,6 +161,12 @@
                     <div class="btn__prix">
                         <span><p>22€</p></span>
                     </div>
+                    <div class="btn__animation">
+                        <div class="btn__animation__zone">
+                            <div class="btn__animation__circle"><i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="btn">
                     <div class="btn__detail">
@@ -107,6 +174,12 @@
                     </div>
                     <div class="btn__prix">
                         <span><p>23€</p></span>
+                    </div>
+                    <div class="btn__animation">
+                        <div class="btn__animation__zone">
+                            <div class="btn__animation__circle"><i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -117,14 +190,14 @@
     </main>
     <footer>
         <div class="footer_titre">
-            <img src="images/ohmyfoodwhite2.png" alt="logo Ohmyfood">
+            <h3>ohmyfood</h3>
         </div>
         <div class="footer_info">
             <ul>
                 <li><i class="fas fa-utensils"></i>Suggérer un restaurant</li>
                 <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
                 <li>Légal</li>
-                <li>contact</li>
+                <li><a href="mailto:contact@ohmyfood.fr"> Contactez-nous </a></li>
             </ul>
         </div>
     </footer>

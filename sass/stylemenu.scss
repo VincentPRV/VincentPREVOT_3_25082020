@@ -13,8 +13,14 @@ $gris-fonce: #E0E0E0;
 @mixin gras {
     font-weight: bold;
 }
-@mixin paddingcoeur {
+@mixin sizecoeur {
     padding: 15px;
+    font-size: 20px;
+}
+@mixin coeur {
+    background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
 }
 @mixin paddinginfo {
     padding: 10px;
@@ -62,36 +68,37 @@ $gris-fonce: #E0E0E0;
 }
 @font-face {
     font-family: 'robotoregular';
-    src: url('Roboto-Regular-webfont.eot');
-    src: url('Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('Roboto-Regular-webfont.woff') format('woff'),
-         url('Roboto-Regular-webfont.ttf') format('truetype'),
-         url('Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    src: url('../font/Roboto-Regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-
 @font-face{
     font-family: 'Shrikhand-Regular';
-    src: url('Shrikhand-Regular.otf') format ('otf');
+    src: url('../font/Shrikhand-Regular.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
 }
 
-#image img{
+#image{
+    margin-bottom: -35px;
+ 
+    img{
     width: 320px;
+    }
 }
 
 a{
     text-decoration: none;
     color: black;
 }
+
 body{
     font-family: 'robotoregular';
     @include center-content;
     flex-direction: column;
     font-size: 13px;
+    height: 100%;;
 }
 header{
     display: flex;
@@ -102,6 +109,7 @@ header{
     background-color: white;
     position: fixed;
     top: 0px;
+    z-index: 1;
     a{
         
     }
@@ -119,34 +127,89 @@ header{
 h1{
     font-family: 'Shrikhand-Regular';
     @include gras;
+    font-size: 20px;
+}
+
+.btn {
+    
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari et Chrome */
+    -o-animation: fadein 2s; /* Opera */
+
+}
+.btn:nth-child(1) { animation-duration: 2s}
+.btn:nth-child(2) { animation-duration: 3s}
+.btn:nth-child(3) { animation-duration: 4s}
+
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* sur Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* sur Safari et Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* sur Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .menu{
     display: flex;
     flex-direction: column;
     width: 320px;
-    height: 1060px;
+    height: 100%;
     border-radius: 40px 40px 0px 0px;
-    margin: -50px; 
     background-color: $gris-clair;
+    &__coeur{
+        @include sizecoeur;
+            @include center-content;
+            :hover > .far{
+                display: none;
+            }
+            :hover > .fas{
+                display: block;
+            } 
+        .fas {
+            display: none;
+            @include coeur;
+        }    
+    }
     &__titre{
-        height: 30px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin: 20px;
-        .far{
-            font-size: 20px;
-        }
     }
     &__detail{
-        height: 300px;
+        height: 100%;
         padding: 10px;
-        margin-top: -25px;    
     }
     &__commande{
         height: 100px;
-        margin-top: -47px;
+        margin-top: -20px;
         @include center-content;
     }
 }
@@ -178,9 +241,7 @@ h1{
         width: 50px; 
         transition: 800ms;     
         &__circle{
-            transform: rotate(0deg);
-            color: orange;
-            
+        
         }  
         } 
     & > .btn__detail {
@@ -244,13 +305,30 @@ h1{
     color: white;
     @include center-content;
     @include box-shadow;
-    cursor: not-allowed;
+    cursor: pointer;
 }
 
 footer{
     background-color: #424242;
     width: 320px;
     color: white;
+    h3{
+        font-family: 'Shrikhand-Regular';
+        margin: 15px;
+        padding-top: 10px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    .fas{
+       
+        font-size: 9px;
+        width: 15px;
+    }
+    .fa-utensils{
+        font-size: 10px;
+    }
 
 }
  .footer_titre
@@ -258,10 +336,6 @@ footer{
 
     height: 30px;
     width: 320px;
-    img{
-        height: 15px;
-        margin: 15px;
-    }
  }
 
  .footer_info{
@@ -278,12 +352,5 @@ footer{
     li:nth-of-type(2) {
         @include gras;
     }
-    .fas{
-       
-        font-size: 9px;
-        width: 15px;
-    }
-    .fa-utensils{
-        font-size: 10px;
-    }
+    
  }
