@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu - La Palette Du Goût</title>
+    <title>Menu - La Note Enchantée</title>
     <link rel="stylesheet" href="sass/stylemenu.css">
     <script src="https://kit.fontawesome.com/f53c7949c7.js" crossorigin="anonymous"></script>
 </head>
@@ -16,7 +16,12 @@
     <main class="menu">
         <section class="menu__titre">
             <h1>La Note Enchantée</h1>
-            <i class="far fa-heart"></i>
+            <div class="menu__coeur">
+                <span class="fa-stack">
+                    <i class="far fa-heart fa-stack-1x"></i>
+                    <i class="fas fa-heart fa-stack-1x"></i>
+                </span>
+            </div>    
         </section>
         <section class="menu__detail">
             <article class="categorie">
@@ -25,7 +30,7 @@
             <article class="contenu">
                 <div class="btn">
                     <div class="btn__detail">
-                        <p><span>Ravioli de foie gras</span><br>Avec épices du Sud de la France</p>
+                        <p><span>Ravioli de fois gras</span><br>Avec une sauce de truffes</p>
                     </div>
                     <div class="btn__prix">
                         <span><p>25€</p></span>
@@ -39,7 +44,7 @@
                 </div>
                 <div class="btn">
                     <div class="btn__detail">
-                        <p><span>Foie gras de canard</span><br>aux copeaux de truffe noire</p>
+                        <p><span>Caviar Oscietra</span><br>Accompagné de blinis de sarrasin</p>
                     </div>
                     <div class="btn__prix">
                         <span><p>35€</p></span>
@@ -53,10 +58,24 @@
                 </div>
                 <div class="btn">
                     <div class="btn__detail">
-                        <p><span>Oeuf au plat</span><br>...</p>
+                        <p><span>Homard et mousse de poireau</span><br>Marinée avec un zest d'orange</p>
                     </div>
                     <div class="btn__prix">
                         <span><p>20€</p></span>
+                    </div>
+                    <div class="btn__animation">
+                        <div class="btn__animation__zone">
+                            <div class="btn__animation__circle"><i class="fas fa-check-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn">
+                    <div class="btn__detail">
+                        <p><span>Foie gras de canard</span><br>Accompagné d'une confiture de figues</p>
+                    </div>
+                    <div class="btn__prix">
+                        <span><p>35€</p></span>
                     </div>
                     <div class="btn__animation">
                         <div class="btn__animation__zone">
@@ -74,7 +93,7 @@
             <article class="contenu">
                 <div class="btn">
                     <div class="btn__detail">
-                        <p><span>Steack aux fines herbes</span><br>Avec des légumes finement tranché et assaisonné</p>
+                        <p><span>Pétoncle au beurre</span><br>Avec une purée de céleri</p>
                     </div>
                     <div class="btn__prix">
                         <span><p>40€</p></span>
@@ -88,7 +107,7 @@
                 </div>
                 <div class="btn">
                     <div class="btn__detail">
-                        <p><span>Tarte bergère au boeuf</span><br>Avec truffes noir et purée de panais</p>
+                        <p><span>Homard poêlé</span><br>Avec une purée de patate douce</p>
                     </div>
                     <div class="btn__prix">
                         <span><p>35€</p></span>
@@ -102,7 +121,7 @@
                 </div>
                 <div class="btn">
                     <div class="btn__detail">
-                        <p><span>Filet de Sole</span><br>Avec une vinaigrette aux agrumes</p>
+                        <p><span>Queue de boeuf braisée</span><br>Accompagné de ris sauvage et sa sauce citron</p>
                     </div>
                     <div class="btn__prix">
                         <span><p>44€</p></span>
@@ -118,12 +137,12 @@
         </section>
         <section class="menu__detail">
             <article class="categorie">
-                <h2><span class="titre_couleur">Pla</span>ts</h2>
+                <h2><span class="titre_couleur">Desse</span>rts</h2>
             </article>
             <article class="contenu">
                 <div class="btn">
                     <div class="btn__detail">
-                        <p><span>Paris-Brest</span><br>Revisité</p>
+                        <p><span>Macarons chocolat noisettes</span><br>Avec une glace caramel au beurre salé</p>
                     </div>
                     <div class="btn__prix">
                         <span><p>18€</p></span>
@@ -137,7 +156,7 @@
                 </div>
                 <div class="btn">
                     <div class="btn__detail">
-                        <p><span>Macarons au chocolat</span><br>Avec une glace à la vanille</p>
+                        <p><span>Baba au rhum</span><br>Avec une bruine citronnée</p>
                     </div>
                     <div class="btn__prix">
                         <span><p>22€</p></span>
@@ -151,7 +170,7 @@
                 </div>
                 <div class="btn">
                     <div class="btn__detail">
-                        <p><span>Mousse au chocolat</span><br>aux épices et truffe noir</p>
+                        <p><span>Tarte au citron meringuée</span><br>destructurée</p>
                     </div>
                     <div class="btn__prix">
                         <span><p>23€</p></span>
@@ -171,14 +190,14 @@
     </main>
     <footer>
         <div class="footer_titre">
-            <img src="images/ohmyfoodwhite2.png" alt="logo Ohmyfood">
+            <h3>ohmyfood</h3>
         </div>
         <div class="footer_info">
             <ul>
                 <li><i class="fas fa-utensils"></i>Suggérer un restaurant</li>
                 <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
                 <li>Légal</li>
-                <li>contact</li>
+                <li><a href="mailto:contact@ohmyfood.fr"> Contactez-nous </a></li>
             </ul>
         </div>
     </footer>

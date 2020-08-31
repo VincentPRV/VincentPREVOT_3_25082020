@@ -152,10 +152,10 @@ header{
     z-index: 2;
     background-color: $color-tertiary;
    @include center-content;
-    animation: fadein 3s;
-    -moz-animation: fadein 3s; /* Firefox */
-    -webkit-animation: fadein 3s; /* Safari et Chrome */
-    -o-animation: fadein 3s; /* Opera */
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari et Chrome */
+    -o-animation: fadein 1s; /* Opera */
 }
 
 @keyframes fadein {
