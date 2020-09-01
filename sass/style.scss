@@ -2,7 +2,7 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $gris-clair: #F5F5F5;
-$gris-fonce: #E0E0E0;
+
 
 @mixin center-content{
     display: flex;
@@ -112,7 +112,7 @@ header{
 {
     @include center-content;
     padding-top: 90px;
-    background: $gris-fonce;
+    background: darken($gris-clair, 20%);
     i{
         padding-right: 10px;
         color: black;
@@ -149,45 +149,81 @@ header{
     top: 0;
     left: 0;
     opacity: 0;
-    z-index: 2;
+    transform: scale(0);
+    z-index: 3;
     background-color: $color-tertiary;
    @include center-content;
-    animation: fadein 1s;
-    -moz-animation: fadein 1s; /* Firefox */
-    -webkit-animation: fadein 1s; /* Safari et Chrome */
-    -o-animation: fadein 1s; /* Opera */
+    animation: fadein 2s, moveout 2s;
+    -moz-animation: fadein 2s, moveout 2s; /* Firefox */
+    -webkit-animation: fadein 2s, moveout 2s; /* Safari et Chrome */
+    -o-animation: fadein 2s, moveout 2s; /* Opera */
+    .fas{
+        @include coeur;
+    }
 }
 
 @keyframes fadein {
-    from {
-        opacity:1;
+    0%, 60% {
+        opacity:0.7;        
     }
-    to {
-        opacity:0;
+    100% {
+        opacity:0;       
     }
 }
 @-moz-keyframes fadein { /* sur Firefox */
-    from {
-        opacity:1;
+    0%, 60% {
+        opacity:0.7;        
     }
-    to {
-        opacity:0;
+    100% {
+        opacity:0;       
     }
 }
 @-webkit-keyframes fadein { /* sur Safari et Chrome */
-    from {
-        opacity:1;
+    0%, 60% {
+        opacity:0.7;        
     }
-    to {
-        opacity:0;
+    100% {
+        opacity:0;       
     }
 }
 @-o-keyframes fadein { /* sur Opera */
-    from {
-        opacity:1;
+    0%, 60% {
+        opacity:0.7;        
     }
-    to {
-        opacity: 0;
+    100% {
+        opacity:0;       
+    }
+}
+@keyframes moveout {
+    0%{
+        transform: scale(0);       
+    }
+    10%, 90% {
+        transform: scale(1);  
+    }
+}
+@-moz-keyframes moveout { /* sur Firefox */
+    0%{
+        transform: scale(0);       
+    }
+    10%, 90% {
+        transform: scale(1);  
+    }
+}
+@-webkit-keyframes moveout { /* sur Safari et Chrome */
+    0%{
+        transform: scale(0);       
+    }
+    10%, 90% {
+        transform: scale(1);  
+    }
+}
+@-o-keyframes moveout { /* sur Opera */
+    0%{
+        transform: scale(0);       
+    }
+    10%, 90% {
+        transform: scale(1);  
     }
 }
 
@@ -236,6 +272,7 @@ header{
     background-color: $gris-clair;
     border-radius: 20px;
     height: 25px;
+    width: 230px;
     @include btn-shadow2;
     &:hover {
         @include btn-shadow($color-primary);
@@ -434,3 +471,64 @@ footer{
     }
     
  }
+
+ @media only screen and (min-width:600px){
+  
+    body{
+        width: 80%;
+        font-size: 18px;
+        margin: auto;
+     
+    }
+    
+    #index {
+        margin: auto;
+        width: 100%;
+    } 
+    
+    .fonct{
+        width: 100%;
+        margin: auto;
+        &__list{
+            width: 30%;
+            margin: auto;
+        }
+        & li{
+            font-size: 20px;
+        }
+        .cellule{
+            width: 400px;
+        }
+    }
+
+    #localisation{
+        width: 100%;
+    }
+
+    #restaurants{
+        width: 100%;
+    }
+
+    footer{
+        width: 100%;
+    }
+
+    .rest-prev{
+        &--palette{
+            transform: scale(1.2);
+            margin-bottom: 50px;
+        }
+        &--note{
+            transform: scale(1.2);
+            margin-bottom: 50px;
+        }
+        &--francaise{
+            transform: scale(1.2);
+            margin-bottom: 50px;
+        }
+        &--delice{
+            transform: scale(1.2);
+            margin-bottom: 50px;
+        }
+    }
+}

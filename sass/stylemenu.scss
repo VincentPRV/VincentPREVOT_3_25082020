@@ -2,7 +2,6 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $gris-clair: #F5F5F5;
-$gris-fonce: #E0E0E0;
 
 @mixin center-content{
     display: flex;
@@ -243,18 +242,19 @@ h1{
         width: 50px; 
         transition: 800ms;     
         &__circle{
-        
         }  
-        } 
+    } 
     & > .btn__detail {
         width: 190px;  
         transition: 800ms;
-        
-        }  
+    }  
     & > .btn__prix {
         transition: 800ms;  
         width: 30px; 
-        }     
+        }   
+    & > i{
+        transform: rotate(360deg);
+    }  
     }    
     &__animation{
         @include center-content;

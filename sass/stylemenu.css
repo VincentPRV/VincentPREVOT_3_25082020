@@ -164,6 +164,8 @@ h1 {
     .btn:hover > .btn__prix {
       transition: 800ms;
       width: 30px; }
+    .btn:hover > i {
+      transform: rotate(360deg); }
   .btn__animation {
     display: flex;
     justify-content: center;
