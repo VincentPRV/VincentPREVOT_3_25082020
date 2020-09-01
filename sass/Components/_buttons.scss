@@ -1,0 +1,139 @@
+.btn{
+    width: 270px;
+    font-size: 10px;
+    background-color:white;
+    border-radius: 10px;
+    display: flex;
+    @include btn-shadow2;
+    margin: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    flex-grow: 1;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari et Chrome */
+    -o-animation: fadein 2s; /* Opera */
+    &:hover{ 
+        cursor: pointer;
+    & > .btn__animation {
+        transform: scaleX(1);  
+        width: 50px; 
+        transition: 800ms;     
+        &__circle{
+        }  
+    } 
+    & > .btn__detail {
+        width: 190px;  
+        transition: 800ms;
+    }  
+    & > .btn__prix {
+        transition: 800ms;  
+        width: 30px; 
+        }   
+    & > i{
+        transform: rotate(360deg);
+    }  
+    }    
+    &__animation{
+        @include center-content;
+        font-size: 15px;
+        border-radius: 0px 10px 10px 0px;
+        background-color: $color-tertiary;
+        transition: 800ms;
+        transform: scaleX(0);
+        transform-origin: 100% 0%;
+        &__circle i{
+            background-color:$color-tertiary;
+            transform: rotate(-360deg);
+            color: white;
+            transition: 800ms;
+            display: block;
+            animation-play-state: running, paused;
+            
+       }
+    }     
+    span{
+        @include gras;
+        }
+    &__detail{
+        width: 250px;  
+        padding-left: 5px;    
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        p{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis; 
+        }
+        }
+    &__prix{
+        width: 20px;
+        display: flex;
+        margin-left: 10px;
+        justify-content: center;
+        align-items: flex-end;
+
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* sur Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* sur Safari et Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* sur Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btn:nth-child(1) { animation-duration: 2s}
+.btn:nth-child(2) { animation-duration: 3s}
+.btn:nth-child(3) { animation-duration: 4s}
+.btn:nth-child(4) { animation-duration: 5s}
+
+.btn_commande{
+    @include degrade;
+    height: 40px;
+    width: 200px;
+    border-radius: 30px;
+    color: white;
+    @include center-content;
+    @include box-shadow;
+    cursor: pointer;
+}
+
+.intro__btn{
+    @include degrade;
+    height: 40px;
+    width: 200px;
+    border-radius: 30px;
+    cursor: not-allowed;
+    color: white;
+    @include center-content;
+    @include box-shadow;
+}

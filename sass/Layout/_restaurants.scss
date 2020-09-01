@@ -1,0 +1,141 @@
+#restaurants{
+    background-color: $gris-clair;
+    margin: auto;
+    height: 1000px;
+    padding-bottom: 20px;
+    width: 320px;   
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h2{
+        margin-left: 20px;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.rest-prev--palette{
+    @include rest-prv;
+    @include box-shadow;
+    background: url('../images/la-palette-du-gout1.jpg') center/cover;
+    background-position-y: -50px;
+    
+    &__info{
+        @include rest-prvinfo;
+        &__detail{
+           @include paddinginfo;
+         
+        span{
+            @include gras;
+        }
+        }
+        &__coeur{
+            @include sizecoeur;
+            @include center-content;
+            :hover > .far{
+                display: none;
+            }
+            :hover > .fas{
+                display: block;
+            } 
+        }
+        .fas {
+            display: none;
+            @include coeur;
+        }    
+    }
+}
+
+
+
+.rest-prev--note{
+    @include rest-prv;
+    @include box-shadow;
+    background: url('../images/la-note-enchantee1.jpg') center/cover;
+    background-position-y: -60px;
+    &__info{
+        @include rest-prvinfo;
+        &__detail{
+            @include paddinginfo;
+        span{
+            @include gras;
+        }
+        }
+        &__coeur{
+            @include sizecoeur;
+            @include center-content;
+            :hover > .far{
+                display: none;
+            }
+            :hover > .fas{
+                display: block;
+            } 
+        }
+        .fas {
+            display: none;
+            @include coeur;
+        }    
+    }
+}
+
+.rest-prev--francaise{
+    @include rest-prv;
+    @include box-shadow;
+    background: url('../images/a-la-francaise1.jpg') center/cover;
+    background-position-y: -50px;
+    &__info{
+        @include rest-prvinfo;
+        &__detail{
+            @include paddinginfo;
+        span{
+            @include gras;
+        }
+        }
+        &__coeur{
+            @include sizecoeur;
+            @include center-content;
+            :hover > .far{
+                display: none;
+            }
+            :hover > .fas{
+                display: block;
+            } 
+        }
+        .fas {
+            display: none;
+            @include coeur;
+        }    
+    }
+}
+
+.rest-prev--delice{
+    @include rest-prv;
+    @include box-shadow;
+    background: url('../images/le-delice-des-sens1.jpg') center/cover;
+    background-position-y: -50px;
+    &__info{
+        @include rest-prvinfo;
+        &__detail{
+            @include paddinginfo;
+        span{
+            @include gras;
+        }
+        }
+        &__coeur{
+            @include sizecoeur;
+            @include center-content;
+            :hover > .far{
+                display: none;
+            }
+            :hover > .fas{
+                display: block;
+            } 
+        }
+        .fas {
+            display: none;
+            @include coeur;
+        }    
+    }
+}

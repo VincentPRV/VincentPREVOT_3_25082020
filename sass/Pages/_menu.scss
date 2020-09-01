@@ -1,0 +1,59 @@
+.menu{
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 100%;
+    border-radius: 40px 40px 0px 0px;
+    background-color: $gris-clair;
+    &__coeur{
+        @include sizecoeur;
+            @include center-content;
+            :hover > .far{
+                display: none;
+            }
+            :hover > .fas{
+                display: block;
+            } 
+        .fas {
+            display: none;
+            @include coeur;
+        }    
+    }
+    &__titre{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px;
+    }
+    &__detail{
+        height: 100%;
+        padding: 10px;
+    }
+    &__commande{
+        height: 100px;
+        margin-top: -20px;
+        @include center-content;
+    }
+}
+
+#image{
+    margin-bottom: -35px;
+ 
+    img{
+    width: 320px;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    height: 100%;;
+}
+
+header{
+    height: 40px;
+    width: 320px;
+} 

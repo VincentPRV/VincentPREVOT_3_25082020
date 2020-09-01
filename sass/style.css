@@ -8,16 +8,6 @@
   src: url("../font/Shrikhand-Regular.otf") format("truetype");
   font-weight: normal;
   font-style: normal; }
-h1 {
-  font-family: 'Shrikhand-Regular'; }
-
-h2 {
-  font-weight: bold; }
-
-#index {
-  height: 100%;
-  width: 320px; }
-
 body {
   font-family: 'robotoregular';
   display: flex;
@@ -26,26 +16,372 @@ body {
   flex-direction: column;
   font-size: 13px; }
 
+.btn {
+  width: 270px;
+  font-size: 10px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  -webkit-box-shadow: 0px 0px 14px -2px #c7c7c7;
+  -moz-box-shadow: 0px 0px 14px -2px #c7c7c7;
+  box-shadow: 0px 0px 14px -2px #c7c7c7;
+  margin: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  flex-grow: 1;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s;
+  /* Firefox */
+  -webkit-animation: fadein 2s;
+  /* Safari et Chrome */
+  -o-animation: fadein 2s;
+  /* Opera */ }
+  .btn:hover {
+    cursor: pointer; }
+    .btn:hover > .btn__animation {
+      transform: scaleX(1);
+      width: 50px;
+      transition: 800ms; }
+    .btn:hover > .btn__detail {
+      width: 190px;
+      transition: 800ms; }
+    .btn:hover > .btn__prix {
+      transition: 800ms;
+      width: 30px; }
+    .btn:hover > i {
+      transform: rotate(360deg); }
+  .btn__animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #99E2D0;
+    transition: 800ms;
+    transform: scaleX(0);
+    transform-origin: 100% 0%; }
+    .btn__animation__circle i {
+      background-color: #99E2D0;
+      transform: rotate(-360deg);
+      color: white;
+      transition: 800ms;
+      display: block;
+      animation-play-state: running, paused; }
+  .btn span {
+    font-weight: bold; }
+  .btn__detail {
+    width: 250px;
+    padding-left: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; }
+    .btn__detail p {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+  .btn__prix {
+    width: 20px;
+    display: flex;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: flex-end; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-moz-keyframes fadein {
+  /* sur Firefox */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes fadein {
+  /* sur Safari et Chrome */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-o-keyframes fadein {
+  /* sur Opera */
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.btn:nth-child(1) {
+  animation-duration: 2s; }
+
+.btn:nth-child(2) {
+  animation-duration: 3s; }
+
+.btn:nth-child(3) {
+  animation-duration: 4s; }
+
+.btn:nth-child(4) {
+  animation-duration: 5s; }
+
+.btn_commande {
+  background: linear-gradient(#FF79DA, #9356DC);
+  height: 40px;
+  width: 200px;
+  border-radius: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 0px 10px 18px -1px #999999;
+  -moz-box-shadow: 0px 10px 18px -1px #999999;
+  box-shadow: 0px 10px 18px -1px #999999;
+  cursor: pointer; }
+
+.intro__btn {
+  background: linear-gradient(#FF79DA, #9356DC);
+  height: 40px;
+  width: 200px;
+  border-radius: 30px;
+  cursor: not-allowed;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 0px 10px 18px -1px #999999;
+  -moz-box-shadow: 0px 10px 18px -1px #999999;
+  box-shadow: 0px 10px 18px -1px #999999; }
+
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
-  width: 100%;
   background-color: white;
   position: fixed;
   top: 0px;
   z-index: 1; }
 
-#localisation {
+.logo_titre {
+  width: 260px; }
+
+.return {
+  font-size: 20px;
+  width: 50px;
+  margin-left: 15px; }
+
+footer {
+  background-color: #424242;
+  width: 320px;
+  color: white; }
+  footer h3 {
+    font-family: 'Shrikhand-Regular';
+    margin: 15px;
+    padding-top: 10px; }
+  footer a {
+    text-decoration: none;
+    color: white; }
+  footer .fas {
+    font-size: 9px;
+    width: 15px; }
+  footer .fa-utensils {
+    font-size: 10px; }
+
+.footer_titre {
+  height: 30px;
+  width: 320px; }
+
+.footer_info {
+  height: 100px;
+  margin: 0px 0px 15px 15px; }
+  .footer_info li {
+    list-style-type: none;
+    margin-left: -40px;
+    line-height: 20px; }
+  .footer_info li:nth-of-type(1) {
+    font-weight: bold; }
+  .footer_info li:nth-of-type(2) {
+    font-weight: bold; }
+
+#restaurants {
+  background-color: #F5F5F5;
+  margin: auto;
+  height: 1000px;
+  padding-bottom: 20px;
+  width: 320px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 90px;
-  background: #c2c2c2; }
-  #localisation i {
-    padding-right: 10px;
+  flex-direction: column;
+  justify-content: space-between; }
+  #restaurants h2 {
+    margin-left: 20px; }
+  #restaurants a {
+    text-decoration: none;
     color: black; }
+
+.rest-prev--palette {
+  margin: auto;
+  height: 200px;
+  width: 280px;
+  position: relative;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 10px 18px -1px #999999;
+  -moz-box-shadow: 0px 10px 18px -1px #999999;
+  box-shadow: 0px 10px 18px -1px #999999;
+  background: url("../images/la-palette-du-gout1.jpg") center/cover;
+  background-position-y: -50px; }
+  .rest-prev--palette__info {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    line-height: 15px;
+    margin-top: -10px; }
+    .rest-prev--palette__info__detail {
+      padding: 10px; }
+      .rest-prev--palette__info__detail span {
+        font-weight: bold; }
+    .rest-prev--palette__info__coeur {
+      padding: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .rest-prev--palette__info__coeur :hover > .far {
+        display: none; }
+      .rest-prev--palette__info__coeur :hover > .fas {
+        display: block; }
+    .rest-prev--palette__info .fas {
+      display: none;
+      background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+
+.rest-prev--note {
+  margin: auto;
+  height: 200px;
+  width: 280px;
+  position: relative;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 10px 18px -1px #999999;
+  -moz-box-shadow: 0px 10px 18px -1px #999999;
+  box-shadow: 0px 10px 18px -1px #999999;
+  background: url("../images/la-note-enchantee1.jpg") center/cover;
+  background-position-y: -60px; }
+  .rest-prev--note__info {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    line-height: 15px;
+    margin-top: -10px; }
+    .rest-prev--note__info__detail {
+      padding: 10px; }
+      .rest-prev--note__info__detail span {
+        font-weight: bold; }
+    .rest-prev--note__info__coeur {
+      padding: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .rest-prev--note__info__coeur :hover > .far {
+        display: none; }
+      .rest-prev--note__info__coeur :hover > .fas {
+        display: block; }
+    .rest-prev--note__info .fas {
+      display: none;
+      background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+
+.rest-prev--francaise {
+  margin: auto;
+  height: 200px;
+  width: 280px;
+  position: relative;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 10px 18px -1px #999999;
+  -moz-box-shadow: 0px 10px 18px -1px #999999;
+  box-shadow: 0px 10px 18px -1px #999999;
+  background: url("../images/a-la-francaise1.jpg") center/cover;
+  background-position-y: -50px; }
+  .rest-prev--francaise__info {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    line-height: 15px;
+    margin-top: -10px; }
+    .rest-prev--francaise__info__detail {
+      padding: 10px; }
+      .rest-prev--francaise__info__detail span {
+        font-weight: bold; }
+    .rest-prev--francaise__info__coeur {
+      padding: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .rest-prev--francaise__info__coeur :hover > .far {
+        display: none; }
+      .rest-prev--francaise__info__coeur :hover > .fas {
+        display: block; }
+    .rest-prev--francaise__info .fas {
+      display: none;
+      background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
+
+.rest-prev--delice {
+  margin: auto;
+  height: 200px;
+  width: 280px;
+  position: relative;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 10px 18px -1px #999999;
+  -moz-box-shadow: 0px 10px 18px -1px #999999;
+  box-shadow: 0px 10px 18px -1px #999999;
+  background: url("../images/le-delice-des-sens1.jpg") center/cover;
+  background-position-y: -50px; }
+  .rest-prev--delice__info {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    border-radius: 0px 0px 10px 10px;
+    line-height: 15px;
+    margin-top: -10px; }
+    .rest-prev--delice__info__detail {
+      padding: 10px; }
+      .rest-prev--delice__info__detail span {
+        font-weight: bold; }
+    .rest-prev--delice__info__coeur {
+      padding: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .rest-prev--delice__info__coeur :hover > .far {
+        display: none; }
+      .rest-prev--delice__info__coeur :hover > .fas {
+        display: block; }
+    .rest-prev--delice__info .fas {
+      display: none;
+      background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; }
 
 .intro {
   display: flex;
@@ -59,18 +395,16 @@ header {
     height: 80px; }
   .intro__titre {
     height: 50px; }
-  .intro__btn {
-    background: linear-gradient(#FF79DA, #9356DC);
-    height: 40px;
-    width: 200px;
-    border-radius: 30px;
-    cursor: not-allowed;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    -webkit-box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
-    box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55); }
+
+#localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 90px;
+  background: #c2c2c2; }
+  #localisation i {
+    padding-right: 10px;
+    color: black; }
 
 .loader-wrapper {
   width: 100%;
@@ -189,259 +523,18 @@ header {
   .cellule:hover .fas {
     color: #9356DC; }
 
-#restaurants {
-  background-color: #F5F5F5;
-  margin: auto;
-  height: 1000px;
-  padding-bottom: 20px;
-  width: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
-  #restaurants h2 {
-    margin-left: 20px; }
-  #restaurants a {
-    text-decoration: none;
-    color: black; }
+h1 {
+  font-family: 'Shrikhand-Regular'; }
 
-.rest-prev--palette {
-  margin: auto;
-  height: 200px;
-  width: 280px;
-  position: relative;
-  border-radius: 15px;
-  -webkit-box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
-  box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
-  background: url("../images/la-palette-du-gout1.jpg") center/cover;
-  background-position-y: -50px; }
-  .rest-prev--palette__info {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    height: 50px;
-    width: 280px;
-    background-color: white;
-    border-radius: 0px 0px 10px 10px;
-    line-height: 15px; }
-    .rest-prev--palette__info__detail {
-      padding: 10px; }
-      .rest-prev--palette__info__detail span {
-        font-weight: bold; }
-    .rest-prev--palette__info__coeur {
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .rest-prev--palette__info__coeur :hover > .far {
-        display: none; }
-      .rest-prev--palette__info__coeur :hover > .fas {
-        display: block; }
-    .rest-prev--palette__info .fas {
-      display: none;
-      background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; }
+h2 {
+  font-weight: bold; }
 
-.rest-prev--note {
-  margin: auto;
-  height: 200px;
-  width: 280px;
-  position: relative;
-  border-radius: 15px;
-  -webkit-box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
-  box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
-  background: url("../images/la-note-enchantee1.jpg") center/cover;
-  background-position-y: -60px; }
-  .rest-prev--note__info {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    height: 50px;
-    width: 280px;
-    background-color: white;
-    border-radius: 0px 0px 10px 10px;
-    line-height: 15px; }
-    .rest-prev--note__info__detail {
-      padding: 10px; }
-      .rest-prev--note__info__detail span {
-        font-weight: bold; }
-    .rest-prev--note__info__coeur {
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .rest-prev--note__info__coeur :hover > .far {
-        display: none; }
-      .rest-prev--note__info__coeur :hover > .fas {
-        display: block; }
-    .rest-prev--note__info .fas {
-      display: none;
-      background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; }
-
-.rest-prev--francaise {
-  margin: auto;
-  height: 200px;
-  width: 280px;
-  position: relative;
-  border-radius: 15px;
-  -webkit-box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
-  box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
-  background: url("../images/a-la-francaise1.jpg") center/cover;
-  background-position-y: -50px; }
-  .rest-prev--francaise__info {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    height: 50px;
-    width: 280px;
-    background-color: white;
-    border-radius: 0px 0px 10px 10px;
-    line-height: 15px; }
-    .rest-prev--francaise__info__detail {
-      padding: 10px; }
-      .rest-prev--francaise__info__detail span {
-        font-weight: bold; }
-    .rest-prev--francaise__info__coeur {
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .rest-prev--francaise__info__coeur :hover > .far {
-        display: none; }
-      .rest-prev--francaise__info__coeur :hover > .fas {
-        display: block; }
-    .rest-prev--francaise__info .fas {
-      display: none;
-      background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; }
-
-.rest-prev--delice {
-  margin: auto;
-  height: 200px;
-  width: 280px;
-  position: relative;
-  border-radius: 15px;
-  -webkit-box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
-  box-shadow: -1px 4px 10px 2px rgba(125, 125, 125, 0.55);
-  background: url("../images/le-delice-des-sens1.jpg") center/cover;
-  background-position-y: -50px; }
-  .rest-prev--delice__info {
-    position: absolute;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    height: 50px;
-    width: 280px;
-    background-color: white;
-    border-radius: 0px 0px 10px 10px;
-    line-height: 15px; }
-    .rest-prev--delice__info__detail {
-      padding: 10px; }
-      .rest-prev--delice__info__detail span {
-        font-weight: bold; }
-    .rest-prev--delice__info__coeur {
-      padding: 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .rest-prev--delice__info__coeur :hover > .far {
-        display: none; }
-      .rest-prev--delice__info__coeur :hover > .fas {
-        display: block; }
-    .rest-prev--delice__info .fas {
-      display: none;
-      background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; }
-
-footer {
-  background-color: #424242;
-  width: 320px;
-  color: white; }
-  footer h3 {
-    font-family: 'Shrikhand-Regular';
-    margin: 15px;
-    padding-top: 10px; }
-  footer a {
-    text-decoration: none;
-    color: white; }
-  footer .fas {
-    font-size: 9px;
-    width: 15px; }
-  footer .fa-utensils {
-    font-size: 10px; }
-
-.footer_titre {
-  height: 30px;
+#index {
+  height: 100%;
   width: 320px; }
 
-.footer_info {
+header {
   height: 100px;
-  margin: 0px 0px 15px 15px; }
-  .footer_info li {
-    list-style-type: none;
-    margin-left: -40px;
-    line-height: 20px; }
-  .footer_info li:nth-of-type(1) {
-    font-weight: bold; }
-  .footer_info li:nth-of-type(2) {
-    font-weight: bold; }
-
-@media only screen and (min-width: 600px) {
-  body {
-    width: 80%;
-    font-size: 18px;
-    margin: auto; }
-
-  #index {
-    margin: auto;
-    width: 100%; }
-
-  .fonct {
-    width: 100%;
-    margin: auto; }
-    .fonct__list {
-      width: 30%;
-      margin: auto; }
-    .fonct li {
-      font-size: 20px; }
-    .fonct .cellule {
-      width: 400px; }
-
-  #localisation {
-    width: 100%; }
-
-  #restaurants {
-    width: 100%; }
-
-  footer {
-    width: 100%; }
-
-  .rest-prev--palette {
-    transform: scale(1.2);
-    margin-bottom: 50px; }
-  .rest-prev--note {
-    transform: scale(1.2);
-    margin-bottom: 50px; }
-  .rest-prev--francaise {
-    transform: scale(1.2);
-    margin-bottom: 50px; }
-  .rest-prev--delice {
-    transform: scale(1.2);
-    margin-bottom: 50px; } }
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */
