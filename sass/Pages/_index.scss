@@ -165,10 +165,18 @@ body{
     }
     @media only screen and (min-width:$breakpoint-tablet){
         width: $mqsize;
+        height: 100%;
         @include center-content;
+        font-size: 20px;
         flex-direction: column;
         &__titre{
             margin: auto;
+        }
+        li{
+            font-size: 15px;
+        }
+        .fas{
+            font-size: 20px;
         }
     }
    

@@ -571,12 +571,18 @@ body {
   @media only screen and (min-width: 600px) {
     .fonct {
       width: 700px;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
+      font-size: 20px;
       flex-direction: column; }
       .fonct__titre {
-        margin: auto; } }
+        margin: auto; }
+      .fonct li {
+        font-size: 15px; }
+      .fonct .fas {
+        font-size: 20px; } }
 
 .cellule {
   background-color: #F5F5F5;
