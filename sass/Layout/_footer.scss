@@ -19,8 +19,16 @@ footer{
     .fa-utensils{
         font-size: 10px;
     }
-
+    @media only screen and (min-width:$breakpoint-tablet){
+        width: 700px;
+        margin-top: -15px;
+        font-size: 15px;
+        h3{
+            font-size: 25px;
+        }
+    }
 }
+
 .footer_titre{
     height: 30px;
     width: 320px;

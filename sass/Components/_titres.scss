@@ -2,11 +2,15 @@ h1{
     font-family: 'Shrikhand-Regular';
     @include gras;
     font-size: 20px;
+    @media only screen and (min-width:$breakpoint-tablet){
+        font-size: 40px;
+    }
 }
 
 .categorie h2{
     font-weight: lighter;
     text-transform: uppercase;
+
 }
 
 .titre_couleur{

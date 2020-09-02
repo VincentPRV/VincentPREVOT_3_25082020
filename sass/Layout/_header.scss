@@ -1,18 +1,28 @@
-header{
-    @include center-content;
+#header{
     background-color: white;
     position: fixed;
+    width: 320px;
+    @include center-content;
     top: 0px;
     z-index: 1;
+    @media only screen and (min-width:$breakpoint-tablet){
+        width: $mqsize;
+    }
 }
 
 .logo_titre
 {
-    width: 260px;
+    width: 200px;
+    @include center-content
 }
 
 .return{
     font-size: 20px;
-    width: 50px;
-    margin-left: 15px;
+    width: 10px;
+    margin-left: -20px;
+    @media only screen and (min-width:$breakpoint-tablet){
+        font-size: 30px;
+        width: 75px;
+        margin-left: -50px;      
+    }
 }

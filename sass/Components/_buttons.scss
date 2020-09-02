@@ -14,43 +14,49 @@
     -moz-animation: fadein 2s; /* Firefox */
     -webkit-animation: fadein 2s; /* Safari et Chrome */
     -o-animation: fadein 2s; /* Opera */
+    @media only screen and (min-width:$breakpoint-tablet){
+        font-size: 20px;
+        width: 500px;
+        padding: 5px;
+    }
     &:hover{ 
         cursor: pointer;
     & > .btn__animation {
         transform: scaleX(1);  
         width: 50px; 
-        transition: 800ms;     
-        &__circle{
-        }  
-    } 
+        transition: $speedbtn;@media only screen and (min-width:$breakpoint-tablet){
+            width: 75px;
+            font-size: 25px;
+        }
+    }      
     & > .btn__detail {
         width: 190px;  
-        transition: 800ms;
+        transition: $speedbtn;
+        @media only screen and (min-width:$breakpoint-tablet){
+            width: 400px;   
+        }
     }  
     & > .btn__prix {
-        transition: 800ms;  
+        transition: $speedbtn;  
         width: 30px; 
+        @media only screen and (min-width:$breakpoint-tablet){
+            width: 50px;
+        }
         }   
-    & > i{
-        transform: rotate(360deg);
-    }  
     }    
     &__animation{
         @include center-content;
         font-size: 15px;
         border-radius: 0px 10px 10px 0px;
         background-color: $color-tertiary;
-        transition: 800ms;
+        transition: $speedbtn;
         transform: scaleX(0);
         transform-origin: 100% 0%;
-        &__circle i{
+        &__circle {
             background-color:$color-tertiary;
-            transform: rotate(-360deg);
             color: white;
-            transition: 800ms;
-            display: block;
-            animation-play-state: running, paused;
-            
+            transform: rotate(0deg); 
+            transition: transform $speedbtn;
        }
     }     
     span{
@@ -62,6 +68,9 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
+        @media only screen and (min-width:$breakpoint-tablet){
+            width: $mqsize;
+        }
         p{
             overflow: hidden;
             white-space: nowrap;
@@ -74,7 +83,12 @@
         margin-left: 10px;
         justify-content: center;
         align-items: flex-end;
+    }
+}
 
+.btn:hover{
+    .btn__animation__circle{
+    transform: rotate(360deg);
     }
 }
 
@@ -125,6 +139,10 @@
     @include center-content;
     @include box-shadow;
     cursor: pointer;
+    @media only screen and (min-width:$breakpoint-tablet){
+        width: 250px;
+        height: 50px;
+    }
 }
 
 .intro__btn{
