@@ -43,7 +43,6 @@ body {
     .btn:hover > .btn__animation {
       transform: scaleX(1);
       width: 50px;
-      margin: -5px;
       transition: 800ms; }
       @media only screen and (min-width: 600px) {
         .btn:hover > .btn__animation {
@@ -69,7 +68,6 @@ body {
     border-radius: 0px 10px 10px 0px;
     background-color: #99E2D0;
     transition: 800ms;
-    margin: -5px;
     transform: scaleX(0);
     transform-origin: 100% 0%; }
     .btn__animation__circle {
@@ -96,7 +94,6 @@ body {
     width: 20px;
     display: flex;
     margin-left: 10px;
-    margin-right: 10px;
     justify-content: center;
     align-items: flex-end; }
 
@@ -336,4 +333,4 @@ body {
       #header img {
         width: 400px; } }
 
-/*# sourceMappingURL=stylemenu.css.map */
+/*# sourceMappingURL=sass-stylemenu.css.map */

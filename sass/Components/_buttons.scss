@@ -24,6 +24,7 @@
     & > .btn__animation {
         transform: scaleX(1);  
         width: 50px; 
+        margin: -5px;
         transition: $speedbtn;@media only screen and (min-width:$breakpoint-tablet){
             width: 75px;
             font-size: 25px;
@@ -50,6 +51,7 @@
         border-radius: 0px 10px 10px 0px;
         background-color: $color-tertiary;
         transition: $speedbtn;
+        margin: -5px;
         transform: scaleX(0);
         transform-origin: 100% 0%;
         &__circle {
@@ -81,6 +83,7 @@
         width: 20px;
         display: flex;
         margin-left: 10px;
+        margin-right: 10px;
         justify-content: center;
         align-items: flex-end;
     }
