@@ -55,6 +55,7 @@ body{
     -o-animation: fadein 2s, moveout 2s; /* Opera */
     .fas{
         @include coeur;
+        font-size: 80px;
     }
 }
 

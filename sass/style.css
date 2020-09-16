@@ -12,7 +12,7 @@ body {
   font-family: 'robotoregular';
   font-size: 13px;
   height: 100%;
-  font-size-adjust: 0.8; }
+  font-size-adjust: 0.5; }
 
 .btn {
   width: 270px;
@@ -535,7 +535,8 @@ body {
   .loader-wrapper .fas {
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; }
+    -webkit-text-fill-color: transparent;
+    font-size: 80px; }
 
 @keyframes fadein {
   0%, 60% {
