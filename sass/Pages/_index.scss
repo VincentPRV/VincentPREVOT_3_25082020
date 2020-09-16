@@ -187,9 +187,10 @@ body{
     height: 25px;
     width: 230px;
     @include btn-shadow2;
+    @include box-shadow;
     &:hover {
         @include btn-shadow($color-primary);
-        cursor: pointer;
+        @include box-shadow2;
     }
     &:hover .fas{
         color: $color-primary;

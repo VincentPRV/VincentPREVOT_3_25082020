@@ -24,12 +24,13 @@
     @include box-shadow;
     background: url('../images/la-palette-du-gout1.jpg') center/cover;
     background-position-y: -50px;
-    
+    &:hover{
+        @include box-shadow2;
+    }
     &__info{
         @include rest-prvinfo;
         &__detail{
-           @include paddinginfo;
-         
+           @include paddinginfo;         
         span{
             @include gras;
         }
@@ -38,15 +39,17 @@
             @include sizecoeur;
             @include center-content;
             :hover > .far{
-                display: none;
+                opacity: 0;
+                transition: opacity $speedheart;
             }
             :hover > .fas{
-                display: block;
+                opacity: 1;
+                transition: opacity $speedheart;
             } 
         }
         .fas {
-            display: none;
             @include coeur;
+            opacity: 0;
         }    
     }
 }
@@ -58,6 +61,9 @@
     @include box-shadow;
     background: url('../images/la-note-enchantee1.jpg') center/cover;
     background-position-y: -60px;
+    &:hover{
+        @include box-shadow2;
+    }
     &__info{
         @include rest-prvinfo;
         &__detail{
@@ -70,16 +76,18 @@
             @include sizecoeur;
             @include center-content;
             :hover > .far{
-                display: none;
+                opacity: 0;
+                transition: opacity $speedheart;
             }
             :hover > .fas{
-                display: block;
+                opacity: 1;
+                transition: opacity $speedheart;
             } 
         }
         .fas {
-            display: none;
             @include coeur;
-        }    
+            opacity: 0;
+        }      
     }
 }
 
@@ -88,6 +96,9 @@
     @include box-shadow;
     background: url('../images/a-la-francaise1.jpg') center/cover;
     background-position-y: -50px;
+    &:hover{
+        @include box-shadow2;
+    }
     &__info{
         @include rest-prvinfo;
         &__detail{
@@ -100,15 +111,17 @@
             @include sizecoeur;
             @include center-content;
             :hover > .far{
-                display: none;
+                opacity: 0;
+                transition: opacity $speedheart;
             }
             :hover > .fas{
-                display: block;
+                opacity: 1;
+                transition: opacity $speedheart;
             } 
         }
         .fas {
-            display: none;
             @include coeur;
+            opacity: 0;
         }    
     }
 }
@@ -118,6 +131,9 @@
     @include box-shadow;
     background: url('../images/le-delice-des-sens1.jpg') center/cover;
     background-position-y: -50px;
+    &:hover{
+        @include box-shadow2;
+    }
     &__info{
         @include rest-prvinfo;
         &__detail{
@@ -130,15 +146,17 @@
             @include sizecoeur;
             @include center-content;
             :hover > .far{
-                display: none;
+                opacity: 0;
+                transition: opacity $speedheart;
             }
             :hover > .fas{
-                display: block;
+                opacity: 1;
+                transition: opacity $speedheart;
             } 
         }
         .fas {
-            display: none;
             @include coeur;
+            opacity: 0;
         }    
     }
 }

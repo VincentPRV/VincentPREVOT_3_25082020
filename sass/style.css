@@ -5,12 +5,13 @@
   font-style: normal; }
 @font-face {
   font-family: 'Shrikhand-Regular';
-  src: url("../font/Shrikhand-Regular.otf") format("truetype");
+  src: url("../font/Shrikhand-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal; }
 body {
   font-family: 'robotoregular';
-  font-size: 13px; }
+  font-size: 13px;
+  height: 100%; }
 
 .btn {
   width: 270px;
@@ -38,28 +39,27 @@ body {
       font-size: 20px;
       width: 500px;
       padding: 5px; } }
-  .btn:hover {
-    cursor: pointer; }
-    .btn:hover > .btn__animation {
-      transform: scaleX(1);
-      width: 50px;
-      transition: 800ms; }
-      @media only screen and (min-width: 600px) {
-        .btn:hover > .btn__animation {
-          width: 75px;
-          font-size: 25px; } }
-    .btn:hover > .btn__detail {
-      width: 190px;
-      transition: 800ms; }
-      @media only screen and (min-width: 600px) {
-        .btn:hover > .btn__detail {
-          width: 400px; } }
-    .btn:hover > .btn__prix {
-      transition: 800ms;
-      width: 30px; }
-      @media only screen and (min-width: 600px) {
-        .btn:hover > .btn__prix {
-          width: 50px; } }
+  .btn:hover > .btn__animation {
+    transform: scaleX(1);
+    width: 50px;
+    margin: -5px;
+    transition: 800ms; }
+    @media only screen and (min-width: 600px) {
+      .btn:hover > .btn__animation {
+        width: 75px;
+        font-size: 25px; } }
+  .btn:hover > .btn__detail {
+    width: 190px;
+    transition: 800ms; }
+    @media only screen and (min-width: 600px) {
+      .btn:hover > .btn__detail {
+        width: 400px; } }
+  .btn:hover > .btn__prix {
+    transition: 800ms;
+    width: 30px; }
+    @media only screen and (min-width: 600px) {
+      .btn:hover > .btn__prix {
+        width: 50px; } }
   .btn__animation {
     display: flex;
     justify-content: center;
@@ -68,6 +68,7 @@ body {
     border-radius: 0px 10px 10px 0px;
     background-color: #99E2D0;
     transition: 800ms;
+    margin: -5px;
     transform: scaleX(0);
     transform-origin: 100% 0%; }
     .btn__animation__circle {
@@ -94,6 +95,7 @@ body {
     width: 20px;
     display: flex;
     margin-left: 10px;
+    margin-right: 10px;
     justify-content: center;
     align-items: flex-end; }
 
@@ -144,10 +146,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-box-shadow: 0px 10px 18px -1px #999999;
-  -moz-box-shadow: 0px 10px 18px -1px #999999;
-  box-shadow: 0px 10px 18px -1px #999999;
-  cursor: pointer; }
+  -webkit-box-shadow: 0px 0px 18px 2px #cccccc;
+  -moz-box-shadow: 0px 0px 18px 2px #cccccc;
+  box-shadow: 0px 0px 18px 2px #cccccc; }
+  .btn_commande:hover {
+    -webkit-box-shadow: 0px 0px 18px 2px #919191;
+    -moz-box-shadow: 0px 0px 18px 2px #919191;
+    box-shadow: 0px 0px 18px 2px #919191; }
   @media only screen and (min-width: 600px) {
     .btn_commande {
       width: 250px;
@@ -163,9 +168,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-box-shadow: 0px 10px 18px -1px #999999;
-  -moz-box-shadow: 0px 10px 18px -1px #999999;
-  box-shadow: 0px 10px 18px -1px #999999; }
+  -webkit-box-shadow: 0px 0px 18px 2px #cccccc;
+  -moz-box-shadow: 0px 0px 18px 2px #cccccc;
+  box-shadow: 0px 0px 18px 2px #cccccc; }
+  .intro__btn:hover {
+    -webkit-box-shadow: 0px 0px 18px 2px #919191;
+    -moz-box-shadow: 0px 0px 18px 2px #919191;
+    box-shadow: 0px 0px 18px 2px #919191; }
 
 #header {
   background-color: white;
@@ -260,11 +269,15 @@ footer {
   width: 280px;
   position: relative;
   border-radius: 15px;
-  -webkit-box-shadow: 0px 10px 18px -1px #999999;
-  -moz-box-shadow: 0px 10px 18px -1px #999999;
-  box-shadow: 0px 10px 18px -1px #999999;
+  -webkit-box-shadow: 0px 0px 18px 2px #cccccc;
+  -moz-box-shadow: 0px 0px 18px 2px #cccccc;
+  box-shadow: 0px 0px 18px 2px #cccccc;
   background: url("../images/la-palette-du-gout1.jpg") center/cover;
   background-position-y: -50px; }
+  .rest-prev--palette:hover {
+    -webkit-box-shadow: 0px 0px 18px 2px #919191;
+    -moz-box-shadow: 0px 0px 18px 2px #919191;
+    box-shadow: 0px 0px 18px 2px #919191; }
   .rest-prev--palette__info {
     position: absolute;
     bottom: 0;
@@ -282,20 +295,25 @@ footer {
       .rest-prev--palette__info__detail span {
         font-weight: bold; }
     .rest-prev--palette__info__coeur {
-      padding: 10px;
+      height: 18px;
+      width: 20px;
+      border-radius: 120px 120px 180px 180px;
+      margin-right: 10px;
       font-size: 20px;
       display: flex;
       justify-content: center;
       align-items: center; }
       .rest-prev--palette__info__coeur :hover > .far {
-        display: none; }
+        opacity: 0;
+        transition: opacity 600ms; }
       .rest-prev--palette__info__coeur :hover > .fas {
-        display: block; }
+        opacity: 1;
+        transition: opacity 600ms; }
     .rest-prev--palette__info .fas {
-      display: none;
       background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; }
+      -webkit-text-fill-color: transparent;
+      opacity: 0; }
 
 .rest-prev--note {
   margin: auto;
@@ -303,11 +321,15 @@ footer {
   width: 280px;
   position: relative;
   border-radius: 15px;
-  -webkit-box-shadow: 0px 10px 18px -1px #999999;
-  -moz-box-shadow: 0px 10px 18px -1px #999999;
-  box-shadow: 0px 10px 18px -1px #999999;
+  -webkit-box-shadow: 0px 0px 18px 2px #cccccc;
+  -moz-box-shadow: 0px 0px 18px 2px #cccccc;
+  box-shadow: 0px 0px 18px 2px #cccccc;
   background: url("../images/la-note-enchantee1.jpg") center/cover;
   background-position-y: -60px; }
+  .rest-prev--note:hover {
+    -webkit-box-shadow: 0px 0px 18px 2px #919191;
+    -moz-box-shadow: 0px 0px 18px 2px #919191;
+    box-shadow: 0px 0px 18px 2px #919191; }
   .rest-prev--note__info {
     position: absolute;
     bottom: 0;
@@ -325,20 +347,25 @@ footer {
       .rest-prev--note__info__detail span {
         font-weight: bold; }
     .rest-prev--note__info__coeur {
-      padding: 10px;
+      height: 18px;
+      width: 20px;
+      border-radius: 120px 120px 180px 180px;
+      margin-right: 10px;
       font-size: 20px;
       display: flex;
       justify-content: center;
       align-items: center; }
       .rest-prev--note__info__coeur :hover > .far {
-        display: none; }
+        opacity: 0;
+        transition: opacity 600ms; }
       .rest-prev--note__info__coeur :hover > .fas {
-        display: block; }
+        opacity: 1;
+        transition: opacity 600ms; }
     .rest-prev--note__info .fas {
-      display: none;
       background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; }
+      -webkit-text-fill-color: transparent;
+      opacity: 0; }
 
 .rest-prev--francaise {
   margin: auto;
@@ -346,11 +373,15 @@ footer {
   width: 280px;
   position: relative;
   border-radius: 15px;
-  -webkit-box-shadow: 0px 10px 18px -1px #999999;
-  -moz-box-shadow: 0px 10px 18px -1px #999999;
-  box-shadow: 0px 10px 18px -1px #999999;
+  -webkit-box-shadow: 0px 0px 18px 2px #cccccc;
+  -moz-box-shadow: 0px 0px 18px 2px #cccccc;
+  box-shadow: 0px 0px 18px 2px #cccccc;
   background: url("../images/a-la-francaise1.jpg") center/cover;
   background-position-y: -50px; }
+  .rest-prev--francaise:hover {
+    -webkit-box-shadow: 0px 0px 18px 2px #919191;
+    -moz-box-shadow: 0px 0px 18px 2px #919191;
+    box-shadow: 0px 0px 18px 2px #919191; }
   .rest-prev--francaise__info {
     position: absolute;
     bottom: 0;
@@ -368,20 +399,25 @@ footer {
       .rest-prev--francaise__info__detail span {
         font-weight: bold; }
     .rest-prev--francaise__info__coeur {
-      padding: 10px;
+      height: 18px;
+      width: 20px;
+      border-radius: 120px 120px 180px 180px;
+      margin-right: 10px;
       font-size: 20px;
       display: flex;
       justify-content: center;
       align-items: center; }
       .rest-prev--francaise__info__coeur :hover > .far {
-        display: none; }
+        opacity: 0;
+        transition: opacity 600ms; }
       .rest-prev--francaise__info__coeur :hover > .fas {
-        display: block; }
+        opacity: 1;
+        transition: opacity 600ms; }
     .rest-prev--francaise__info .fas {
-      display: none;
       background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; }
+      -webkit-text-fill-color: transparent;
+      opacity: 0; }
 
 .rest-prev--delice {
   margin: auto;
@@ -389,11 +425,15 @@ footer {
   width: 280px;
   position: relative;
   border-radius: 15px;
-  -webkit-box-shadow: 0px 10px 18px -1px #999999;
-  -moz-box-shadow: 0px 10px 18px -1px #999999;
-  box-shadow: 0px 10px 18px -1px #999999;
+  -webkit-box-shadow: 0px 0px 18px 2px #cccccc;
+  -moz-box-shadow: 0px 0px 18px 2px #cccccc;
+  box-shadow: 0px 0px 18px 2px #cccccc;
   background: url("../images/le-delice-des-sens1.jpg") center/cover;
   background-position-y: -50px; }
+  .rest-prev--delice:hover {
+    -webkit-box-shadow: 0px 0px 18px 2px #919191;
+    -moz-box-shadow: 0px 0px 18px 2px #919191;
+    box-shadow: 0px 0px 18px 2px #919191; }
   .rest-prev--delice__info {
     position: absolute;
     bottom: 0;
@@ -411,20 +451,25 @@ footer {
       .rest-prev--delice__info__detail span {
         font-weight: bold; }
     .rest-prev--delice__info__coeur {
-      padding: 10px;
+      height: 18px;
+      width: 20px;
+      border-radius: 120px 120px 180px 180px;
+      margin-right: 10px;
       font-size: 20px;
       display: flex;
       justify-content: center;
       align-items: center; }
       .rest-prev--delice__info__coeur :hover > .far {
-        display: none; }
+        opacity: 0;
+        transition: opacity 600ms; }
       .rest-prev--delice__info__coeur :hover > .fas {
-        display: block; }
+        opacity: 1;
+        transition: opacity 600ms; }
     .rest-prev--delice__info .fas {
-      display: none;
       background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
       -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; }
+      -webkit-text-fill-color: transparent;
+      opacity: 0; }
 
 body {
   display: flex;
@@ -591,10 +636,15 @@ body {
   width: 230px;
   -webkit-box-shadow: 0px 0px 14px -2px #c7c7c7;
   -moz-box-shadow: 0px 0px 14px -2px #c7c7c7;
-  box-shadow: 0px 0px 14px -2px #c7c7c7; }
+  box-shadow: 0px 0px 14px -2px #c7c7c7;
+  -webkit-box-shadow: 0px 0px 18px 2px #cccccc;
+  -moz-box-shadow: 0px 0px 18px 2px #cccccc;
+  box-shadow: 0px 0px 18px 2px #cccccc; }
   .cellule:hover {
     background-color: #f2eafb;
-    cursor: pointer; }
+    -webkit-box-shadow: 0px 0px 18px 2px #919191;
+    -moz-box-shadow: 0px 0px 18px 2px #919191;
+    box-shadow: 0px 0px 18px 2px #919191; }
   .cellule:hover .fas {
     color: #9356DC; }
 
