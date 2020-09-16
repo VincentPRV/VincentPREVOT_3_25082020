@@ -5,12 +5,13 @@
   font-style: normal; }
 @font-face {
   font-family: 'Shrikhand-Regular';
-  src: url("../font/Shrikhand-Regular.otf") format("truetype");
+  src: url("../font/Shrikhand-Regular.otf") format("opentype");
   font-weight: normal;
   font-style: normal; }
 body {
   font-family: 'robotoregular';
-  font-size: 13px; }
+  font-size: 13px;
+  height: 100%; }
 
 .btn {
   width: 270px;
