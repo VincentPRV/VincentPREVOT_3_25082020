@@ -40,16 +40,15 @@ body{
 }
 
 .loader-wrapper{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vw;
     position: absolute;
-    top: 0;
     left: 0;
     opacity: 0;
     transform: scale(0);
     z-index: 3;
     background-color: $color-tertiary;
-   @include center-content;
+    @include center-content;
     animation: fadein 2s, moveout 2s;
     -moz-animation: fadein 2s, moveout 2s; /* Firefox */
     -webkit-animation: fadein 2s, moveout 2s; /* Safari et Chrome */
